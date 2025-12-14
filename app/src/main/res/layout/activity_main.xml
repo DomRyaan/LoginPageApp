@@ -13,10 +13,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:fontFamily="sans-serif-condensed-light"
+        android:fontFamily="@font/poppins"
         android:text="Sign In"
         android:textColor="#2A4ECA"
-        android:textSize="35dp"
+        android:textSize="33dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guidelineDivisor"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,7 +35,7 @@
         android:layout_width="339dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/abeezee"
+        android:fontFamily="@font/poppins"
         android:text="It was popularised in the 1960s with the release of Letraset sheetscontaining Lorem Ipsum."
         android:textAlignment="center"
         android:textColor="#8E8E93"
@@ -54,24 +54,26 @@
         android:layout_marginEnd="4dp"
 
 
+        android:fontFamily="@font/poppins"
         android:paddingTop="10dp"
-        android:paddingBottom="10dp"
 
+        android:paddingBottom="10dp"
         android:text="Google"
         android:textColor="#61677D"
-        android:textSize="18dp"
+        android:textSize="16dp"
 
+        android:textStyle="bold"
         app:backgroundTint="#F5F9FE"
+
+
         app:cornerRadius="14dp"
-
-
         app:icon="@drawable/logogoogle"
         app:iconGravity="textStart"
         app:iconPadding="10dp"
         app:iconSize="24dp"
+
+
         app:iconTint="@null"
-
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -87,47 +89,37 @@
         android:id="@+id/button2"
         android:layout_width="180dp"
         android:layout_height="60dp"
-        android:layout_marginTop="32dp"
         android:layout_marginStart="4dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppins"
         android:paddingTop="10dp"
-        android:paddingBottom="10dp"
 
+        android:paddingBottom="10dp"
         android:text="Facebook"
         android:textColor="#61677D"
-        android:textSize="18dp"
+        android:textSize="16dp"
 
+        android:textStyle="bold"
         app:backgroundTint="#F5F9FE"
-        app:cornerRadius="14dp"
 
+        app:cornerRadius="14dp"
         app:icon="@drawable/facelogo"
         app:iconGravity="textStart"
         app:iconPadding="10dp"
         app:iconSize="30dp"
-        app:iconTint="@null"
 
+        app:iconTint="@null"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <View
-        android:layout_width="0dp"
-        android:layout_height="2dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="10dp"
-        android:background="#E0E5EC"
-        app:layout_constraintBottom_toBottomOf="@+id/textView4"
-        app:layout_constraintEnd_toStartOf="@+id/textView4"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toTopOf="@+id/textView4" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="or"
+        android:fontFamily="@font/poppins"
+        android:text="Or"
         android:textColor="#262626"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -135,16 +127,113 @@
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="10dp"
+        android:background="#E0E5EC"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+    <View
+        android:id="@+id/view"
         android:layout_width="0dp"
         android:layout_height="2dp"
         android:layout_marginStart="10dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="10dp"
         android:background="#E0E5EC"
         app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toTopOf="@+id/textView4"
-    />
+        app:layout_constraintVertical_bias="0.476" />
 
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:background="#F5F9FE"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="Entre com o seu Email"
+        android:inputType="textEmailAddress"
+        android:textColorHint="#656464"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="12dp"
+        android:background="#F5F9FE"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="Entre com sua senha"
+        android:inputType="textPassword"
+        android:textColorHint="#656464"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins"
+        android:text="Esqueceu a senha?"
+        android:textColor="#8E8E93"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/poppins"
+        android:text="Log in"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:backgroundTint="#3461FD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="Don't have account?"
+        app:layout_constraintStart_toStartOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="Sign up"
+        android:textColor="#3851FF"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView5"
+        app:layout_constraintStart_toEndOf="@+id/textView5" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
