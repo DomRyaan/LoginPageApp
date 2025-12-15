@@ -153,7 +153,7 @@
         app:layout_constraintVertical_bias="0.476" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/emailId"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginTop="16dp"
@@ -163,7 +163,7 @@
         android:hint="Entre com o seu Email"
         android:inputType="textEmailAddress"
         android:textColorHint="#656464"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
+        app:layout_constraintBottom_toTopOf="@+id/passwordId"
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/view2"
@@ -171,7 +171,7 @@
         app:layout_constraintVertical_chainStyle="packed" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/passwordId"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginTop="12dp"
@@ -184,7 +184,7 @@
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/view2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/emailId" />
 
     <TextView
         android:id="@+id/textView3"
@@ -194,24 +194,25 @@
         android:fontFamily="@font/poppins"
         android:text="Esqueceu a senha?"
         android:textColor="#8E8E93"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintEnd_toEndOf="@+id/passwordId"
+        app:layout_constraintTop_toBottomOf="@+id/passwordId" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/loginId"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="24dp"
         android:fontFamily="@font/poppins"
+        android:onClick="autenticar"
         android:text="Log in"
         android:textSize="16dp"
         android:textStyle="bold"
         app:backgroundTint="#3461FD"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordId" />
 
     <TextView
         android:id="@+id/textView5"
@@ -221,8 +222,8 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppins"
         android:text="Don't have account?"
-        app:layout_constraintStart_toStartOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintStart_toStartOf="@+id/loginId"
+        app:layout_constraintTop_toBottomOf="@+id/loginId" />
 
     <TextView
         android:id="@+id/textView6"
@@ -234,6 +235,23 @@
         android:textColor="#3851FF"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView5"
         app:layout_constraintStart_toEndOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/notificaçãoId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="notificaçãoId" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
