@@ -23,6 +23,7 @@ Chaves de criptografia: Gerenciadas pelo Android Keystore.
 Dados: Criptografados com algoritmos modernos (AES256_SIV e AES256_GCM).
 
 ## 📸 Screenshots
+<div style="align: center;">
 <table>
   <tr>
     <td>Tela de Login</td>
@@ -33,3 +34,4 @@ Dados: Criptografados com algoritmos modernos (AES256_SIV e AES256_GCM).
     <td><img src="./img/telaregistrar.jpg" width="200"></td>
   </tr>
 </table>
+</div>
