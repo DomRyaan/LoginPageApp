@@ -34,6 +34,7 @@ android {
 dependencies {
 
     implementation(libs.appcompat)
+    implementation("androidx.security:security-crypto:1.1.0-alpha06")
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)

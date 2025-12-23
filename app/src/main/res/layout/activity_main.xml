@@ -9,26 +9,57 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/notificaçãoId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="24dp"
+
+        tools:text="Ocorreu um erro de autenticação!"
+        tools:textColor="@color/white"
+        android:textSize="16sp"
+        android:visibility="gone"
+
+        android:background="@drawable/notification_background"
+        android:elevation="4dp"
+        android:fontFamily="monospace"
+        android:padding="12dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierDivisor1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="notificaçãoId" />
+
+    <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/poppins"
-        android:text="Sign In"
+        android:text="Login"
         android:textColor="#2A4ECA"
         android:textSize="33dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guidelineDivisor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barrierDivisor1"
+      />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineDivisor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.19" />
+        app:layout_constraintGuide_begin="169dp" />
 
     <TextView
         android:id="@+id/textView2"
@@ -36,9 +67,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins"
-        android:text="It was popularised in the 1960s with the release of Letraset sheetscontaining Lorem Ipsum."
+        android:text="Tornou-se popular na década de 1960 com o lançamento das folhas de Letraset contendo... e etc."
         android:textAlignment="center"
-        android:textColor="#8E8E93"
+        android:textColor="@color/text_secundary_color"
         android:textSize="14sp"
         android:typeface="normal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,20 +83,18 @@
 
         android:layout_marginTop="32dp"
         android:layout_marginEnd="4dp"
+        android:padding="16dp"
 
 
         android:fontFamily="@font/poppins"
-        android:paddingTop="10dp"
-
-        android:paddingBottom="10dp"
+        android:textFontWeight="500"
         android:text="Google"
         android:textColor="#61677D"
-        android:textSize="16dp"
+        android:textSize="16sp"
 
-        android:textStyle="bold"
         app:backgroundTint="#F5F9FE"
 
-
+        app:elevation="8dp"
         app:cornerRadius="14dp"
         app:icon="@drawable/logogoogle"
         app:iconGravity="textStart"
@@ -92,16 +121,18 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/poppins"
-        android:paddingTop="10dp"
+        android:padding="16dp"
 
-        android:paddingBottom="10dp"
+
+        android:textFontWeight="500"
         android:text="Facebook"
         android:textColor="#61677D"
-        android:textSize="16dp"
+        android:textSize="16sp"
 
         android:textStyle="bold"
         app:backgroundTint="#F5F9FE"
 
+        app:elevation="8dp"
         app:cornerRadius="14dp"
         app:icon="@drawable/facelogo"
         app:iconGravity="textStart"
@@ -153,16 +184,17 @@
         app:layout_constraintVertical_bias="0.476" />
 
     <EditText
-        android:id="@+id/emailId"
+        android:id="@+id/emailOrPhoneId"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginTop="16dp"
-        android:background="#F5F9FE"
-        android:ems="10"
+        android:background="@drawable/input_box"
         android:fontFamily="@font/poppins"
-        android:hint="Entre com o seu Email"
+        android:hint="Digite seu Email"
         android:inputType="textEmailAddress"
-        android:textColorHint="#656464"
+        android:padding="10dp"
+        android:textColorHint="#7C8BA0"
+        android:textColor="#7C8BA0"
         app:layout_constraintBottom_toTopOf="@+id/passwordId"
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintHorizontal_bias="0.0"
@@ -175,16 +207,17 @@
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginTop="12dp"
-        android:background="#F5F9FE"
-        android:ems="10"
+        android:background="@drawable/input_box"
         android:fontFamily="@font/poppins"
-        android:hint="Entre com sua senha"
+        android:hint="Digite sua senha"
         android:inputType="textPassword"
-        android:textColorHint="#656464"
+        android:padding="10dp"
+        android:textColorHint="#7C8BA0"
+        android:textColor="#7C8BA0"
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/view2"
-        app:layout_constraintTop_toBottomOf="@+id/emailId" />
+        app:layout_constraintTop_toBottomOf="@+id/emailOrPhoneId" />
 
     <TextView
         android:id="@+id/textView3"
@@ -206,9 +239,14 @@
         android:layout_marginEnd="24dp"
         android:fontFamily="@font/poppins"
         android:onClick="autenticar"
-        android:text="Log in"
-        android:textSize="16dp"
-        android:textStyle="bold"
+        android:text="Entrar"
+        android:textColor="#F8F8F8"
+        android:textFontWeight="500"
+        android:textSize="17sp"
+
+        app:cornerRadius="10dp"
+        app:elevation="20dp"
+
         app:backgroundTint="#3461FD"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -221,37 +259,20 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppins"
-        android:text="Don't have account?"
+        android:text="Você não tem uma conta?"
         app:layout_constraintStart_toStartOf="@+id/loginId"
         app:layout_constraintTop_toBottomOf="@+id/loginId" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/signUpId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:fontFamily="@font/poppins"
-        android:text="Sign up"
+        android:onClick="signUpPage"
+        android:text="Registre-se aqui"
         android:textColor="#3851FF"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView5"
         app:layout_constraintStart_toEndOf="@+id/textView5" />
-
-    <TextView
-        android:id="@+id/notificaçãoId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="bottom"
-        app:constraint_referenced_ids="notificaçãoId" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

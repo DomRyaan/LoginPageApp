@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".registrar">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/poppins"
+        android:text="Sign Up"
+        android:textColor="#2A4ECA"
+        android:textSize="33sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="339dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+
+        android:fontFamily="@font/poppins"
+        android:text="It was popularised in the 1960s with the release of Letraset sheetscontaining Lorem Ipsum."
+        android:textAlignment="center"
+        android:textColor="@color/text_secundary_color"
+        android:textSize="14sp"
+        android:typeface="normal"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/buttonFacebook2"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppins"
+        android:padding="16dp"
+
+        android:text="Facebook"
+        android:textColor="#61677D"
+        android:textFontWeight="500"
+        android:textSize="16sp"
+        app:backgroundTint="#F5F9FE"
+
+        app:cornerRadius="14dp"
+        app:icon="@drawable/facelogo"
+        app:iconGravity="textStart"
+        app:iconPadding="10dp"
+        app:iconSize="30dp"
+        app:iconTint="@null"
+
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <Button
+        android:id="@+id/buttonGoogle2"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppins"
+        android:padding="16dp"
+
+        android:text="Google"
+        android:textColor="#61677D"
+        android:textFontWeight="500"
+        android:textSize="16sp"
+        app:backgroundTint="#F5F9FE"
+
+        app:cornerRadius="14dp"
+        app:icon="@drawable/logogoogle"
+        app:iconGravity="textStart"
+        app:iconPadding="10dp"
+        app:iconSize="24dp"
+        app:iconTint="@null"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins"
+        android:text="Or"
+        android:textColor="#262626"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGoogle2" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="10dp"
+        android:background="#E0E5EC"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="#E0E5EC"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/nameId"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+
+        android:layout_marginTop="16dp"
+        android:background="@drawable/input_box"
+        android:hint="Nome"
+        android:padding="18dp"
+        android:textColor="#7C8BA0"
+        android:textColorHint="#7C8BA0"
+        app:layout_constraintBottom_toTopOf="@+id/emailOrPhoneId"
+        app:layout_constraintEnd_toEndOf="@+id/buttonGoogle2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/buttonFacebook2"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/emailOrPhoneId"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/input_box"
+        android:hint="Email/Phone Number"
+        android:padding="18dp"
+        android:textColor="#7C8BA0"
+        android:textColorHint="#7C8BA0"
+        app:layout_constraintBottom_toTopOf="@+id/passwordLayout"
+        app:layout_constraintEnd_toEndOf="@+id/buttonGoogle2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/buttonFacebook2"
+        app:layout_constraintTop_toBottomOf="@+id/nameId" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:hintEnabled="false"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonGoogle2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/buttonFacebook2"
+        app:layout_constraintTop_toBottomOf="@+id/emailOrPhoneId"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="#7C8BA0">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordId"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            android:layout_marginTop="8dp"
+            android:background="@drawable/input_box"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="18dp"
+            android:textColor="#7C8BA0"
+            android:textColorHint="#7C8BA0" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/checkboxLayoutId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/passwordLayout"
+        app:layout_constraintStart_toStartOf="@+id/passwordLayout"
+        app:layout_constraintTop_toBottomOf="@+id/passwordLayout"
+        >
+
+        <CheckBox
+            android:id="@+id/checkBoxServiceId"
+            android:layout_width="25dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            app:buttonTint="#90CAF9"
+            app:layout_constraintBaseline_toBaselineOf="@+id/linkTermoPoliticaId"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/linkTermoPoliticaId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/poppins"
+            android:text="Eu concordo com os Termos de Uso e as Políticas de privacidade"
+
+            android:textAlignment="textStart"
+
+            android:textColor="#3B4054"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/checkBoxServiceId"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/buttonRegistrarId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="16dp"
+
+        android:fontFamily="@font/poppins"
+
+        android:onClick="criarConta"
+        android:paddingStart="24dp"
+        android:paddingTop="18dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="18dp"
+        android:text="Criar Conta"
+
+        android:textColor="@color/white"
+        android:textFontWeight="500"
+        android:textSize="17sp"
+        app:backgroundTint="#3461FD"
+        app:cornerRadius="10dp"
+        app:elevation="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/passwordLayout"
+        app:layout_constraintStart_toStartOf="@+id/passwordLayout"
+        app:layout_constraintTop_toBottomOf="@+id/checkboxLayoutId"
+        tools:elevation="8dp" />
+
+    <TextView
+        android:id="@+id/signInLinkID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="Você tem uma conta? Entre aqui"
+        android:textColor="#3B4054"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/buttonRegistrarId"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRegistrarId" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

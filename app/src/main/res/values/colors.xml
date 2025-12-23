@@ -3,4 +3,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#9FA8DA</color>
+    <color name="sucess">#C320A50E</color>
+    <color name="error">#C3AB1313</color>
+
+    <color name="primary_color">#2A4ECA</color>
+    <color name="secondary_color">#F5F9FE</color>
+
+    <color name="text_secundary_color">#8E8E93</color>
+    <color name="link_color">#3461FD</color>
+
 </resources>
